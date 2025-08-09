@@ -13,10 +13,10 @@ import { Facility, PaginationInfo } from '../models/facility.model';
           <tr>
             <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-10">#</th>
             <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-auto">الاسم</th>
-            <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-16">الحالة</th>
-            <th class="bg-gray-50 p-1.5 text-center font-bold text-gray-800 border-b border-gray-200 text-xs w-24">قطاع العمل</th>
-            <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-28">الرقم القومي</th>
-            <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-28">رقم الهاتف</th>
+            <th class="bg-gray-50 p-1.5 text-center font-bold text-gray-800 border-b border-gray-200 text-xs w-28">الحالة</th>
+            <th class="bg-gray-50 p-1.5 text-center font-bold text-gray-800 border-b border-gray-200 text-xs w-32">قطاع العمل</th>
+            <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-32">الرقم القومي</th>
+            <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-32">رقم الهاتف</th>
             <th class="bg-gray-50 p-1.5 text-right font-bold text-gray-800 border-b border-gray-200 text-xs w-24"></th>
           </tr>
         </thead>
@@ -29,12 +29,12 @@ import { Facility, PaginationInfo } from '../models/facility.model';
             <td class="p-2 align-middle text-table-text" style="font-size: 10px;">{{ facility.name }}</td>
             <td class="p-2 align-middle">
               <span 
-                class="status-badge py-0.5 px-1.5 rounded font-semibold inline-block w-12 text-center"
+                class="status-badge py-0.5 px-1.5 rounded font-semibold inline-block w-20 h-5 text-center"
                 style="font-size: 9px;"
                 [class.status-active]="facility.status === 'active'"
                 [class.status-inactive]="facility.status === 'inactive'"
               >
-                {{ facility.status === 'active' ? 'مفعل' : 'موقوف' }}
+                {{ facility.status === 'active' ? 'مقبول' : 'مرفوض' }}
               </span>
             </td>
             <td class="p-2 align-middle text-table-text text-center" style="font-size: 10px;">{{ facility.sector }}</td>
